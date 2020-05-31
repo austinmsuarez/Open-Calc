@@ -53,7 +53,9 @@ nav{
     margin-bottom: 5px;
     font-weight: bold;
 }
-
+.nav-button:focus{
+    outline: none;
+}
 .theme-group > h2{
     margin: 0;
     background-color: whitesmoke;

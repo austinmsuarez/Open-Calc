@@ -30,11 +30,33 @@ function changeTheme($event){
     
     if(event.srcElement.innerHTML === "Default"){
         sheet = "default.css"
+        document.getElementById("default-style-button").style.backgroundColor= "darkorange";  
+        document.getElementById("dark-style-button").style.backgroundColor= "whitesmoke";  
+        document.getElementById("light-style-button").style.backgroundColor= "whitesmoke";  
+
+        document.getElementById("default-style-button").style.color= "white";  
+        document.getElementById("dark-style-button").style.color= "black";  
+        document.getElementById("light-style-button").style.color= "black";  
     }
     else if(event.srcElement.innerHTML === "Dark"){
         sheet = "dark.css"
+        document.getElementById("default-style-button").style.backgroundColor= "whitesmoke";  
+        document.getElementById("dark-style-button").style.backgroundColor= "cadetblue";  
+        document.getElementById("light-style-button").style.backgroundColor= "whitesmoke";  
+
+        document.getElementById("default-style-button").style.color= "black";  
+        document.getElementById("dark-style-button").style.color= "white";  
+        document.getElementById("light-style-button").style.color= "black";  
+
     }else{
         sheet = "light.css"
+        document.getElementById("default-style-button").style.backgroundColor= "whitesmoke";  
+        document.getElementById("dark-style-button").style.backgroundColor= "whitesmoke";  
+        document.getElementById("light-style-button").style.backgroundColor= "#e52e60";  
+
+        document.getElementById("default-style-button").style.color= "black";  
+        document.getElementById("dark-style-button").style.color= "black";  
+        document.getElementById("light-style-button").style.color= "white";  
     }
     document.getElementById("theme-style-sheet").setAttribute("href", "./styles/"+sheet);  
 }
@@ -82,7 +104,7 @@ function clearCurrent(){
     is_neg = false;
     document.getElementsByClassName("answer")[0].innerHTML = current;
 }
-
+//fix issues with creating decimal point numbers
 function makeFloat(){
     if(!is_float){
         document.getElementsByClassName("answer")[0].innerHTML = String(current+'.');
