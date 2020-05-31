@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" id="theme-style-sheet" href="./styles/default.css">
+    <script src="index.js"></script>
+    <title>Open Calc</title>
+</head>
+
+
+<body>
+    <button class="menu">
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+    </button>
+
+    <nav>
+        <h1 class="app-name">Open Calc</h1>
+        <div class="theme-group">
+            <h2>Themes:</h2>
+            <button onclick="changeTheme(this)" class="nav-button">Default</button>
+            <button onclick="changeTheme(this)" class="nav-button">Dark</button>
+            <button onclick="changeTheme(this)" class="nav-button">Light</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="calculator">
+            <div class="answer-display">
+                <p class="answer">0</p>
+            </div>
+            <div class="button-display">
+                <button onclick="clearCurrent()">AC</button>
+                <button onclick="signChange()">+/-</button>
+                <button onclick="operate(this)">%</button>
+                <button onclick="operate(this)">/</button>
+
+                <button onclick="append(7)">7</button>
+                <button onclick="append(8)">8</button>
+                <button onclick="append(9)">9</button>
+                <button onclick="operate(this)">X</button>
+
+                <button onclick="append(4)">4</button>
+                <button onclick="append(5)">5</button>
+                <button onclick="append(6)">6</button>
+                <button onclick="operate(this)">-</button>
+
+                <button onclick="append(1)">1</button>
+                <button onclick="append(2)">2</button>
+                <button onclick="append(3)">3</button>
+                <button onclick="operate(this)">+</button>
+
+                <button onclick="append()" class="zero-button">0</button>
+                <button onclick="makeFloat()">.</button>
+                <button onclick="performOperation()">=</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html

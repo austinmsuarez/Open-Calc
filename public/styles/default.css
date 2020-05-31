@@ -1,0 +1,24 @@
+body{
+    background-color: lightgray;
+}
+
+.calculator{
+    background-color: grey;
+    border-right: 10px #696969 solid;
+    border-bottom: 10px #696969 solid ;
+}
+
+.answer-display{
+    background-color: #78AB46;
+}
+
+.button-display > button{
+    border-right: 2px #696969 solid;
+    border-bottom: 2px #696969 solid ;
+}
+
+.zero-button{
+    background-color: darkorange;
+    border: 1px solid darkorange;
+    color: white;
+}

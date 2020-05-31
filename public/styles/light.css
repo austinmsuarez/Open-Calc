@@ -1,0 +1,26 @@
+body{
+    background-color: #F0FFF0;
+}
+
+.calculator{
+ 
+    background-color: #f0ead6;
+    border-right: 10px #e3decb solid;
+    border-bottom: 10px #e3decb solid ;
+}
+
+.answer-display{
+    background-color: #F5FFFA;
+}
+
+button{
+    background-color: white;
+    border-right: 2px cornsilk solid;
+    border-bottom: 2px cornsilk solid ;
+}
+
+.zero-button{
+    background-color: #e52e60;
+    border: 1px solid #e52e60;
+    color: white;
+}
