@@ -13,21 +13,44 @@
 
 
 <body>
-    <button class="menu">
-        <div class="menu-icon"></div>
-        <div class="menu-icon"></div>
-        <div class="menu-icon"></div>
-    </button>
+    <!-- Menu mobile -->
+    <!-- <div>
+        <button onclick="menuToggle()" class="menu">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </button>
+    </div> -->
 
-    <nav>
+    <!-- <nav id="nav-menu-mobile">
         <h1 class="app-name">Open Calc</h1>
         <div class="theme-group">
-            <h2>Themes:</h2>
-            <button onclick="changeTheme(this)" id="default-style-button" class="nav-button">Default</button>
+            <h2 class="menu-section">Themes</h2>
             <button onclick="changeTheme(this)" id="dark-style-button" class="nav-button">Dark</button>
+            <button onclick="changeTheme(this)" id="default-style-button" class="nav-button">Default</button>
             <button onclick="changeTheme(this)" id="light-style-button" class="nav-button">Light</button>
         </div>
+        <button class="close-menu-button" onclick="menuToggle()">Close Menu</button>
     </nav>
+ -->
+    <!-- Menu -->
+    <nav class="nav-menu">
+
+        <ul class="theme-group">
+            <li class="app-name">
+                <h1 >Open Calc</h1>
+            </li>
+            <li onclick="changeTheme(this)" id="dark-style-button" class="nav-button">
+                <a>Dark</a>
+            </li>
+            <li onclick="changeTheme(this)" id="default-style-button" class="nav-button">
+                <a>Default</a>
+            </li>
+            <li onclick="changeTheme(this)" id="light-style-button" class="nav-button">
+                <a>Light</a>
+            </li>
+        </ul>
+    </nav> 
 
     <main>
         <div class="calculator">
@@ -36,12 +59,12 @@
             </div>
             <div class="button-display">
                 <button onclick="clearCurrent()">AC</button>
-                <button onclick="signChange()">+/-</button>
-                <button onclick="operate(this)">%</button>
-                <button onclick="operate(this)">/</button>
+                <button onclick="signChange()" aria-label="change sign">+/-</button>
+                <button onclick="makePercent(this)" aria-label="make percent">%</button>
+                <button onclick="operate(this)" aria-label="divide">/</button>
 
-                <button onclick="append(7)">7</button>
-                <button onclick="append(8)">8</button>
+                <button onclick="append(7)" aria-label="number 7">7</button>
+                <button onclick="append(8)" aria-label="number 8">8</button>
                 <button onclick="append(9)">9</button>
                 <button onclick="operate(this)">X</button>
 
@@ -55,7 +78,7 @@
                 <button onclick="append(3)">3</button>
                 <button onclick="operate(this)">+</button>
 
-                <button onclick="append()" class="zero-button">0</button>
+                <button onclick="append(0)" class="zero-button">0</button>
                 <button onclick="makeFloat()">.</button>
                 <button onclick="performOperation()">=</button>
             </div>

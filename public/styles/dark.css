@@ -1,3 +1,8 @@
+#dark-style-button{
+    border-color: cadetblue;
+}
+
+
 body{
     background-color: #121212;
 }
@@ -6,6 +11,10 @@ body{
     background-color: #332940;
     border-right: 10px #1f1a24 solid;
     border-bottom: 10px #1f1a24 solid ;
+}
+
+.close-menu-button{
+    background-color: cadetblue;
 }
 
 .answer-display{
@@ -19,6 +28,16 @@ button{
     border-bottom: 2px grey solid ;
 }
 
+.menu{
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+.menu-icon{
+    background-color: white;
+}
+.menu-bar{
+    background-color: cadetblue;
+}
 .zero-button{
     background-color: cadetblue;
     border: 1px solid cadetblue;

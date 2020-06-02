@@ -5,11 +5,13 @@ current = 0;
 is_float = false;
 is_neg = false;
 is_float = false;
+display_menu = false;
+
 function append(number){
     current = document.getElementsByClassName("answer")[0].innerHTML;
     if(is_float){
         document.getElementsByClassName("answer")[0].innerHTML  = document.getElementsByClassName("answer")[0].innerHTML + number;
-        current = document.getElementsByClassName("answer")[0].innerHTML;
+        current = parseFloat(document.getElementsByClassName("answer")[0].innerHTML);
     }
     else{
         current= parseInt(current);
@@ -30,37 +32,18 @@ function changeTheme($event){
     
     if(event.srcElement.innerHTML === "Default"){
         sheet = "default.css"
-        document.getElementById("default-style-button").style.backgroundColor= "darkorange";  
-        document.getElementById("dark-style-button").style.backgroundColor= "whitesmoke";  
-        document.getElementById("light-style-button").style.backgroundColor= "whitesmoke";  
-
-        document.getElementById("default-style-button").style.color= "white";  
-        document.getElementById("dark-style-button").style.color= "black";  
-        document.getElementById("light-style-button").style.color= "black";  
+       
     }
     else if(event.srcElement.innerHTML === "Dark"){
         sheet = "dark.css"
-        document.getElementById("default-style-button").style.backgroundColor= "whitesmoke";  
-        document.getElementById("dark-style-button").style.backgroundColor= "cadetblue";  
-        document.getElementById("light-style-button").style.backgroundColor= "whitesmoke";  
-
-        document.getElementById("default-style-button").style.color= "black";  
-        document.getElementById("dark-style-button").style.color= "white";  
-        document.getElementById("light-style-button").style.color= "black";  
+       
 
     }else{
         sheet = "light.css"
-        document.getElementById("default-style-button").style.backgroundColor= "whitesmoke";  
-        document.getElementById("dark-style-button").style.backgroundColor= "whitesmoke";  
-        document.getElementById("light-style-button").style.backgroundColor= "#e52e60";  
-
-        document.getElementById("default-style-button").style.color= "black";  
-        document.getElementById("dark-style-button").style.color= "black";  
-        document.getElementById("light-style-button").style.color= "white";  
+   
     }
     document.getElementById("theme-style-sheet").setAttribute("href", "./styles/"+sheet);  
 }
-
 
 function performOperation(){
     while(calculation_stack.length){
@@ -87,13 +70,11 @@ function performOperation(){
                 break;
         }
     }
-    console.log(current)
     if(is_float){
-        document.getElementsByClassName("answer")[0].innerHTML = parseFloat(current).toPrecision(4);
+        document.getElementsByClassName("answer")[0].innerHTML = parseFloat(current).toPrecision(2);
     }
     else{
         document.getElementsByClassName("answer")[0].innerHTML = parseFloat(current);
-
     }
 
 }
@@ -104,19 +85,36 @@ function clearCurrent(){
     is_neg = false;
     document.getElementsByClassName("answer")[0].innerHTML = current;
 }
+
 //fix issues with creating decimal point numbers
 function makeFloat(){
     if(!is_float){
         document.getElementsByClassName("answer")[0].innerHTML = String(current+'.');
         is_float = true;
     }
-
 }
 
 function signChange(){
     current *= -1;
     is_neg = !is_neg;
     document.getElementsByClassName("answer")[0].innerHTML = current;
+}
+
+function makePercent($event){
+    calculation_stack.push(current)
+    clearCurrent();
+    calculation_stack.push(event.srcElement.innerHTML)
+    performOperation()
+}
+
+function menuToggle(){
+    display_menu = !display_menu;
+    if(display_menu){
+        document.getElementById("nav-menu").style.display = "block";
+    }
+    else{
+        document.getElementById("nav-menu").style.display = "none";
+    }
 }
 
 function operate($event){
@@ -127,5 +125,6 @@ function operate($event){
         calculation_stack.push(current)
     }
     clearCurrent();
+    is_float = false
     calculation_stack.push(event.srcElement.innerHTML)
 }

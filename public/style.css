@@ -1,47 +1,67 @@
-/* menu button */
-.menu{
-    position: fixed;
-    top: 0;
-    left: 10;
-    margin: 20px;
-    border: none;
-    background-color: transparent;
-}
-
-.menu-icon{
-        width: 35px;
-        height: 5px;
-        background-color: black;
-        margin: 6px 0;
-}
 
 h1, h2{
     font-family: sans-serif;
     font-size: 12pt;
 }
 
-h2{
-    text-align: left;
-    background-color: white;
-}
+/* Nav */
 
 .app-name{
-    background-color: darkorange;
-    color: white;
-    margin-top: 0;
-    padding-top: 25px;
-    height: 50px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0;
+    height: 100%;
 }
 
-nav{
-    text-align: center;
-    position: absolute;
-    width: 150px;
-    height: 100%;
-    left: 0;
-    background-color: whitesmoke;
+ul {
+    list-style-type: none;
     margin: 0;
-    box-shadow: 10px -1px 10px darkgrey;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  li {
+    float: left;
+    border-bottom: 5px solid transparent;
+
+  }
+  
+  li a {
+    font-family: sans-serif;
+
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+  
+/* Mobile Nav */
+/* .menu-icon{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+} */
+
+/* .menu{
+    position: absolute;
+    top: 0;
+    left: 10;
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+} */
+
+/* .menu-section{
+    text-align: left;
+    background-color: white;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
 }
 
 .nav-button{
@@ -53,26 +73,16 @@ nav{
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 .nav-button:focus{
     outline: none;
 }
-.theme-group > h2{
-    margin: 0;
-    background-color: whitesmoke;
-}
+ */
 
-body{
-    margin: 0;
-    font-family: 'Press Start 2P', cursive;
-}
-main{
-    display: flex;
-    justify-content: center;
-}
-.calculator{
-    margin-top: 50px;
-    padding: 20px;
-    border-radius: 10px;
+/* Calculator styles */
+.answer{
+    font-size: 20pt;
+    padding: 5px;
 }
 
 .answer-display{
@@ -83,9 +93,9 @@ main{
     padding-bottom: 10px;
 }
 
-.answer{
-    font-size: 20pt;
-    padding: 5px;
+body{
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .button-display{
@@ -106,6 +116,54 @@ main{
     filter: brightness(90%);
 }
 
+.calculator{
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close-menu-button{
+    border: none;
+    background-color: darkorange;
+    bottom: 0;
+    color: white;
+    display: block;
+    height: 50px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
 .zero-button{
     grid-column: 1/3;
 }
+
+/* device styles
+@media only screen and (max-width: 425px) {
+    nav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .close-menu-button{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav{
+        display: none;
+    }
+} */

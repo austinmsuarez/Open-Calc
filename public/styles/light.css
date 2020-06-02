@@ -1,3 +1,7 @@
+#light-style-button{
+    border-color: #e52e60;
+}
+
 body{
     background-color: #F0FFF0;
 }
@@ -9,6 +13,8 @@ body{
     border-bottom: 10px #e3decb solid ;
 }
 
+
+
 .answer-display{
     background-color: #F5FFFA;
 }
@@ -19,8 +25,25 @@ button{
     border-bottom: 2px cornsilk solid ;
 }
 
+.close-menu-button{
+    background-color: #e52e60;
+}
+
+.menu{
+    background-color: #e52e60;
+    border-radius: 5px;
+}
+.menu-icon{
+    background-color: white;
+}
+
+.menu-bar{
+    background-color: #e52e60;
+}
+
 .zero-button{
     background-color: #e52e60;
     border: 1px solid #e52e60;
     color: white;
 }
+

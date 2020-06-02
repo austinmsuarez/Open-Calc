@@ -1,5 +1,18 @@
+#default-style-button{
+    border-color: darkorange;
+}
+
+.answer-display{
+    background-color: #78AB46;
+}
+
 body{
     background-color: lightgray;
+}
+
+.button-display > button{
+    border-right: 2px #696969 solid;
+    border-bottom: 2px #696969 solid ;
 }
 
 .calculator{
@@ -8,13 +21,22 @@ body{
     border-bottom: 10px #696969 solid ;
 }
 
-.answer-display{
-    background-color: #78AB46;
+
+
+.menu{
+    background-color: darkorange;
+    border-radius: 5px;
 }
 
-.button-display > button{
-    border-right: 2px #696969 solid;
-    border-bottom: 2px #696969 solid ;
+.menu-icon{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.menu-bar{
+    background-color: darkorange;
 }
 
 .zero-button{
